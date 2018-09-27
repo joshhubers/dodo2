@@ -1,0 +1,13 @@
+- args:
+    name: posts
+    table:
+      name: thread
+      schema: public
+    using:
+      manual_configuration:
+        column_mapping:
+          id: thread_id
+        remote_table:
+          name: post
+          schema: public
+  type: create_array_relationship

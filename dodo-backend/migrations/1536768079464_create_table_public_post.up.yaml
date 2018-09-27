@@ -1,0 +1,9 @@
+- args:
+    sql: CREATE TABLE public."post"("id" serial NOT NULL UNIQUE, "content" text NOT
+      NULL, "user_id" integer NOT NULL, "thread_id" integer NOT NULL, PRIMARY KEY
+      ("id") );
+  type: run_sql
+- args:
+    name: post
+    schema: public
+  type: add_existing_table_or_view

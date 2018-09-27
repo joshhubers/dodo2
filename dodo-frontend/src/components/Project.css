@@ -1,0 +1,12 @@
+.project {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  min-width: 250px;
+  min-height: 250px;
+}
+
+.project__title {
+  text-align: center;
+}

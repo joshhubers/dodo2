@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE public."thread"("id" serial NOT NULL UNIQUE, "title" text NOT
+      NULL, "project_id" integer NOT NULL, PRIMARY KEY ("id") );
+  type: run_sql
+- args:
+    name: thread
+    schema: public
+  type: add_existing_table_or_view

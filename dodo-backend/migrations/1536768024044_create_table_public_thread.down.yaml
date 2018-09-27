@@ -1,0 +1,3 @@
+- args:
+    sql: DROP TABLE public."thread"
+  type: run_sql

@@ -1,0 +1,6 @@
+- args:
+    relationship: posts
+    table:
+      name: thread
+      schema: public
+  type: drop_relationship

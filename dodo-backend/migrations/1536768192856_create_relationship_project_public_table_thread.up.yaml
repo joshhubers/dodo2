@@ -1,0 +1,13 @@
+- args:
+    name: project
+    table:
+      name: thread
+      schema: public
+    using:
+      manual_configuration:
+        column_mapping:
+          project_id: id
+        remote_table:
+          name: project
+          schema: public
+  type: create_object_relationship
