@@ -1,4 +1,4 @@
-version: '3.6'
+version: '3'
 services:
   postgres:
     image: postgres
@@ -18,5 +18,13 @@ services:
       - graphql-engine
       - serve
       - --enable-console
+  dodo-frontend:
+    build: dodo-frontend
+    volumes:
+      - /dodo-frontend/node_modules
+      - /dodo-frontend/tmp
+      - ./dodo-frontend:/dodo-frontend
+    ports:
+      - '3000:3000'
 volumes:
   db_data:

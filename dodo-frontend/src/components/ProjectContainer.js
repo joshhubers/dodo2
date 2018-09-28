@@ -6,15 +6,6 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const DELETE_PROJECT_QUERY = gql`
-  mutation DeleteProject($project_id: Int!) {
-    delete_project(where:{ id: { _eq: $project_id } })
-    {
-      affected_rows
-    }
-  } 
-`
-
 const PROJECT_QUERY = gql`
 query UserById{
   user_by_pk(id: 1) {
@@ -30,7 +21,7 @@ query UserById{
 const CREATE_PROJECT_QUERY = gql`
 mutation InsertProject($user_id: Int!, $title: String!, $description: String!, $status: String!){
   insert_project(objects: [{ user_id: $user_id, title: $title, description: $description, status: $status }]){
-    returning{
+    returning {
       id
       title
       description
@@ -60,7 +51,7 @@ export default class ProjectContainer extends Component {
   }
 
   closeCreateProject() {
-    this.setState({isCreatingProject: false});
+    this.setState({isCreatingProject: false, modalProjectTitle: '', modalProjectDescription: ''});
   }
 
   setTitle(event) {

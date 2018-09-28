@@ -35,7 +35,7 @@ class Project extends Component {
     return (
       <div className='project'>
         <h3 className='project__title'>{project.title}</h3>
-
+        
         <Mutation
           mutation={DELETE_PROJECT_QUERY}
           update={(cache, data) => this.deleted(cache, data)}>
