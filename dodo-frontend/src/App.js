@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import ProjectContainer from './components/ProjectContainer';
-import logo from './logo.svg';
 import './App.css';
 import ApolloClient from 'apollo-boost';
-//import gql from 'graphql-tag';
 import { ApolloProvider } from 'react-apollo';
 
 const apollo = new ApolloClient({
